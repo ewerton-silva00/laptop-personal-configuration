@@ -16,6 +16,12 @@ Plug 'stephpy/vim-yaml'
 Plug 'yggdroot/indentline'
 Plug 'plasticboy/vim-markdown'
 Plug 'dracula/vim',{'as':'dracula'}
+Plug 'tomtom/tcomment_vim'
+Plug 'hashivim/vim-terraform'
+" https://vimawesome.com/plugin/vim-gitgutter
+Plug 'airblade/vim-gitgutter'
+" https://github.com/voldikss/vim-floaterm
+Plug 'voldikss/vim-floaterm'
 
 call plug#end()
 
@@ -32,6 +38,21 @@ let g:indentLine_enabled = 0
 " https://vimawesome.com/plugin/markdown-syntax
 " Disable Folding
 let g:vim_markdown_folding_disabled = 1
+
+syntax on
+colorscheme dracula
+set visualbell
+
+" Floaterm Configuration
+" Configuration example
+let g:floaterm_keymap_new    = '<F6>'
+let g:floaterm_keymap_kill   = '<F7>'
+let g:floaterm_keymap_prev   = '<F8>'
+let g:floaterm_keymap_next   = '<F9>'
+let g:floaterm_keymap_toggle = '<F10>'
+
+let g:floaterm_width = 0.9
+let g:floaterm_height = 0.9
 
 syntax on
 colorscheme dracula
