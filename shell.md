@@ -18,17 +18,21 @@ HIST_STAMPS="dd.mm.yyyy"
 
 # Plugins Enabled
 plugins=(git
+	git-prompt
+	zsh-completions
+	dnf
+	golang
+	python
 	zsh-autosuggestions
 	zsh-syntax-highlighting
 	docker
 	docker-compose
 	kubectl
+	helm
 	zsh-kubectl-prompt
 	terraform
 	ansible
-        aws
-	command-not-found
-	vagrant)
+	command-not-found)
 
 # --- Increase History Size
 export HISTFILESIZE=1000000
@@ -61,12 +65,15 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # --- A Command-line Fuzzy Finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-```
 
+# --- Enable ZSH Auto Completion
+fpath=(~/.oh-my-zsh/completions $fpath)
+autoload -U compinit && compinit
+```
 
 No terminal e demais editores de texto sempre utilizo o conjunto de fontes [`FiraCode`](https://github.com/tonsky/FiraCode).
 ```bash
 sudo dnf install fira-code-fonts -y
 ```
-**Font:**  Fira Code Light  
+**Font:**  Fira Code Light
 **Size**: 14
